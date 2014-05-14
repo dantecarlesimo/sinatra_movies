@@ -19,8 +19,8 @@ get '/movies/new' do
 end
 
 get '/movies/create' do
-  response = Typhoeus.post("localhost:3000/movies.json", 
-    params: {movie: params[:movie]})
+  response = Typhoeus.post("localhost:3000/movies.json", params: {movie: params[:movie]})
+  #binding.pry 
   redirect '/movies'
 end
 
